@@ -1,0 +1,367 @@
+.notification-bar {
+    background-color: #a8e3e7;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+   
+  
+  }
+  
+  .notification-bar p {
+    margin: 0;
+    color: #000;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .shop-link {
+    color: #0077be;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .shop-link:hover {
+    text-decoration: underline;
+  }
+  
+  .location-select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+  }
+  
+  .close-button:hover {
+    color: #ff0000;
+  }
+
+  /* //...........................navbar,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
+  body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  
+  }
+  
+  .navbar-left,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .navbar-left {
+    position: absolute;
+    left: 20px;
+  }
+  
+  .navbar-right {
+    position: absolute;
+    right: 20px;
+  }
+  
+  .logo {
+    font-size: 30px;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+  
+  .navbar-links a:hover {
+    color: #0077be;
+    text-decoration: underline;
+  }
+  
+  .icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+/* 
+  //............................Hero................................... */
+
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px; */
+    background-color: #fff;
+  }
+  
+  .hero-text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 28px;
+    /* font-weight: bold; */
+    margin-bottom: 10px;
+    font-family: 'Baskerville', serif;
+  }
+  
+  .hero-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .shop-now-btn {
+    padding: 10px 20px;
+    border: 1px solid black;
+    background: transparent;
+    font-size: 14px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .shop-now-btn:hover {
+    background-color:  #a8e3e7;
+    color: white;
+  }
+  
+  /* .hero-image {
+    flex: 1;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  } */
+  
+  .overlay-icons {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon-button {
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .icon-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .image a:hover {
+    color: #0077be;
+    text-decoration: underline;
+  }
+
+  /* //.........................loginsystem/.......................... */
+
+  /* .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f7f8fa;
+} */
+
+.auth-card {
+  background: #a8e3e7;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.auth-card input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-btn:hover {
+  background: #0056b3;
+}
+
+.auth-toggle {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-toggle span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.auth-toggle span:hover {
+  text-decoration: underline;
+}
+
+/* //......................Insert.jsx css................... */
+.form{
+  width: 500px;
+
+  border: 2px solid #555;
+  padding: 20px;
+   height: 400px;
+  backdrop-filter: blur(50px);
+  background-size: cover; 
+  box-shadow: 1px 1px 1px 1px;
+  border-radius: 20px;
+  margin-top: 30px;
+ 
+}
+.form button {
+  width: 200px;
+position: relative;
+
+ height: 40px;
+  border: none;
+  border-radius: 12px;
+  background-color: #1abc9c;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color:  #555;
+}
+
+.form h1{
+  color: #07886e;
+}
+
+.form input{
+  height: 30px;
+  width: 300px;
+  background-color: rgb(255, 238, 238);
+border: 1px solid #1abc9c;
+border-radius: 12px;
+padding-left: 10px;
+}
+
+body{background-image: url("./images/1bg.jpg");
+  background-repeat:no-repeat;
+  background-size: cover; height:500px;
+
+} 
+.row1{
+  display: flex;
+  gap: 20px;
+}  
+
+/* //............cardData.......................... */
+#cardData
+{
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 80px;
+    border-radius: 30px;
+    text-align: center;
+
+}
+
+#cardData img:hover{
+    border: 1px solid gray;
+
+}
+.card {
+  position: relative;
+  overflow: hidden; /* Content card se bahar na nikle */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.card img {
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.card .overlay {
+  position: absolute;
+  bottom: 0; /* Image ke niche show hoga */
+  width: 100%;
+  background-color: white; /* Background white */
+  color: black; /* Text color black */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  opacity: 0; /* Default hidden */
+  transition: opacity 0.3s ease-in-out;
+  border-top: 1px solid #ddd; /* Separate line between image and text */
+}
+
+.card:hover .overlay {
+  opacity: 1; /* On hover, text visible hoga */
+}
