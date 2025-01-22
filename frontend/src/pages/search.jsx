@@ -9,7 +9,7 @@ const Search=()=>{
 
 const handlSubmit=()=>{
  let api = "http://localhost:8100/Product/productSearch";
- axios.get(api, {item:item}).then((res)=>{
+ axios.post(api, {item:item}).then((res)=>{
     setmyData(res.data)
  })
 }

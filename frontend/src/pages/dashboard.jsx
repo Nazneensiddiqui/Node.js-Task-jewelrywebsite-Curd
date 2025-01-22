@@ -38,7 +38,7 @@ const Dashboard = () => {
           <Navbar.Brand href="#" style={{ paddingLeft: "50px", paddingTop:"10px" , height:"50px", color:"#2c3e50"}}> <GrUserAdmin onClick={()=>{navigate("/dashboard/admin")}}/>
              Admin Dashboard Tiffany Céleste Jewelry
            Name: {username}. Email: {useremail}{" "}
-                  <Link to="reset">Reset-password</Link>
+                  <Link to="resetpass">Reset-password</Link>
                </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">
@@ -69,7 +69,7 @@ const Dashboard = () => {
                 </h3>
                 <p >
                   Name: {username}. Email: {useremail}{" "}
-                  <Link to="reset">Reset-password</Link>
+                  <Link to="resetpass">Reset-password</Link>
                 </p>
 
                 {/* Scrollable Content */}

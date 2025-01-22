@@ -44,11 +44,19 @@ const EditSave= async(req , res)=>{
     res.status(200).send({msg:"Item Succesfully Update!!!"})
 }
 
+const DataSearch= async(req,res)=>{
+   const{item}=req.body
+   const mydata= await ProModel.find({"description" : {$regex:item , $options: "i"}});
+    res.send(mydata)
+    
+}
+
 module.exports={
     ProInsert,
     ProDisplay,
     ProUpdate,
     DataDelet,
     EditDisplay,
-    EditSave
+    EditSave,
+    DataSearch
 }

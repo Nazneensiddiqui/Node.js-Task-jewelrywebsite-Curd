@@ -8,5 +8,6 @@ route.get("/productupdate", ProControler.ProUpdate)
 route.post("/productdelete", ProControler.DataDelet)
 route.post("/editdisplay", ProControler.EditDisplay)
 route.post("/editproductsave", ProControler.EditSave)
+route.post("/productSearch", ProControler.DataSearch)
 
 module.exports=route

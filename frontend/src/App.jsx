@@ -10,7 +10,7 @@ import JewelryTable from "./pages/Display";
 import Update from "./pages/Update";
 import EditData from "./pages/editData";
 import Search from "./pages/search";
-import Model from "./pages/model";
+import ResetPassword from "./pages/ResetPass";
 
 
 const App=()=>{
@@ -31,7 +31,7 @@ const App=()=>{
       <Route path="update" element={<Update/>}/>
       <Route path="editdata/:id" element={<EditData/>}/>
       <Route path="search" element={<Search/>}/>
-      <Route path="model" element={<Model/>}/>
+      <Route path="resetpass" element={<ResetPassword/>}/>
       
       
 

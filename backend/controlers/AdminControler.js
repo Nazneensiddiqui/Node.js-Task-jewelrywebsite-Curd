@@ -2,7 +2,7 @@ const AdminModel = require("../models/adminModel");
 const bcrypt = require("bcrypt");
 
 const LoginSystem = async (req, res) => {
-    console.log(req .body)
+    //console.log(req .body)
     const { name, email, password } = req.body;
 
     try {
@@ -42,8 +42,32 @@ const LoginSystem = async (req, res) => {
         console.error("Error:", error.message);
         return res.status(500).send({ msg: "Server Error" });
     }
-};
+}
+  
+//............................resetpassword..............................
+const ResetPass = async(req,res)=>{
+    const{  userid,oldpassword,newpassword}=req.body;
+    
+try {
+    const Data= await AdminModel.findById(userid)
+    const cheackpassword= await bcrypt.compare(oldpassword , Data.password)
+    if(cheackpassword)
+    {
+        const salt = await bcrypt.genSalt();
+            const hashedPassword = await bcrypt.hash(newpassword, salt);
+            await AdminModel.findByIdAndUpdate(userid , {password:hashedPassword })
+        res.status(200).send({msg:"Password Update!!!"})
+    }
+} catch (error) {
+    res.status(400).send({msg:"old password dose not match!"})
+}
+ }
+
+
+
+
 
 module.exports = {
-    LoginSystem
+    LoginSystem,
+    ResetPass
 }
