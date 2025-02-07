@@ -7,8 +7,11 @@ import TopNevbar from "./Components/TopNevbar";
 const Layout=()=>{
     return(
         <>
+        <div style={{position:"sticky", top:"0" , zIndex:"10"}}>
         <Header/>
         <TopNevbar/>
+        </div>
+      
      
        <Outlet/>
        

@@ -8,6 +8,7 @@ import { CiHeart } from "react-icons/ci";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 
@@ -15,6 +16,9 @@ import { useNavigate } from "react-router-dom";
 
 
 const TopNevbar=()=>{
+const Cart=useSelector(state=>state.mycart.cart);
+const cartLet=Cart.lenght;
+
   const navigate=useNavigate()
     return(
         <>
@@ -33,7 +37,9 @@ const TopNevbar=()=>{
         <span>Book an Appointment</span>
         <CiUser className="icon" onClick={()=>{navigate("/loginsystem")}}/>
         <CiHeart className="icon" />
-        <HiOutlineShoppingBag className="icon" />
+
+        {cartLet > 0 && ( <span style={{ fontSize: "14px" }}>{cartLet}</span> )}
+        <HiOutlineShoppingBag className="icon" onClick={()=>{navigate("/cart")}}  />
       </div>
       <div className="navbar-links">
         <Link to="home">Home</Link>

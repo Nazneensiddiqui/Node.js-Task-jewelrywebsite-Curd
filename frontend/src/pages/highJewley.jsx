@@ -2,10 +2,13 @@ import blue from "../vedio/blue.mp4"
 import Card from 'react-bootstrap/Card';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useDispatch } from "react-redux";
+import { AddToCart } from "../CartSlice";
 
 
 const HighJewelry=()=>{
 const [myData , setMyData]=useState([]);
+const dispatch=useDispatch()
 
     const loadData=()=>{
         let api = "http://localhost:8100/Product/productdisplay";
@@ -19,6 +22,13 @@ const [myData , setMyData]=useState([]);
         loadData();
     },[])
 
+// ************Addtocart slice.****************
+
+const Add_Product=(id,price, description,linkimg)=>{
+  dispatch(AddToCart({id:id, price:price , description:description , linkimg:linkimg , quty:1}))
+}
+
+
 const ans=myData.map((key)=>{
  return(
          <>
@@ -28,7 +38,7 @@ const ans=myData.map((key)=>{
             {/* Image Section with Overlay */}
                 <div className="card">
                   <img src={key.linkimg} style={{ height: "240px", width: "100%" }}  />
-                  <div className="overlay"  >Add to Cart</div>
+                  <div className="overlay" onClick={()=>{(Add_Product(key._id, key.price, key.description, key.linkimg))}} >Add to Cart</div>
                 </div>
        <Card.Body>
        <Card.Text style={{fontFamily:"time", fontSize:"11px"}}>

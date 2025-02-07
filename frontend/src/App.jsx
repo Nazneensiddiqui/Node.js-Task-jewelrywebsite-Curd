@@ -11,6 +11,7 @@ import Update from "./pages/Update";
 import EditData from "./pages/editData";
 import Search from "./pages/search";
 import ResetPassword from "./pages/ResetPass";
+import Cart from "./pages/Cart";
 
 
 const App=()=>{
@@ -23,6 +24,7 @@ const App=()=>{
       <Route path="home" element={<Home/>}/>
       <Route path="high" element={<HighJewelry/>}/>
       <Route path="loginsystem" element={<LogSystem/>}/>   
+      <Route path="cart" element={<Cart/>}/>   
       </Route>
       <Route path="dashboard" element={<Dashboard/>}>
       <Route path="admin" element={<Admin/>}/>
