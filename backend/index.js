@@ -1,7 +1,10 @@
 const express=require("express")
 const app=express();
-const port=8100;
+require("dotenv").config()
 const cors=require("cors")
+
+const port=process.env.PORT ||8100
+const dbcon=process.env.DBATLAS_CONN 
 
 const mongoose=require("mongoose")
 const bodyParser=require("body-parser")
@@ -9,8 +12,8 @@ const bodyParser=require("body-parser")
 const AdminRoute=require("./Routes/AdminRoute")
 const ProRoute=require("./Routes/ProRoute")
 
-mongoose.connect("mongodb://127.0.0.1:27017/The-Jewelry").then((res)=>{
-    console.log("DB Conneced");
+mongoose.connect(dbcon).then((res)=>{
+    console.log("DBAtias Conneced");
 })
 
 app.use(cors())
