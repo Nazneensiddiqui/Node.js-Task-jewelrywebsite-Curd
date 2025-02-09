@@ -1,5 +1,5 @@
 const AdminModel = require("../models/adminModel");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
 
 const LoginSystem = async (req, res) => {
     //console.log(req .body)
@@ -8,8 +8,8 @@ const LoginSystem = async (req, res) => {
     try {
         if (name) {
             // SignUp Logic
-            const salt = await bcrypt.genSalt();
-            const hashedPassword = await bcrypt.hash(password, salt); // Password hashing
+            // const salt = await bcrypt.genSalt();
+            const hashedPassword = await bcrypt.hash(password, 8); // Password hashing
             const existingUser = await AdminModel.findOne({ email });
 
             if (existingUser) {
