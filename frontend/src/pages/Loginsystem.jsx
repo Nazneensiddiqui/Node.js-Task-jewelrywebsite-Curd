@@ -26,7 +26,7 @@ const LogSystem=()=> {
     
     const handleSubmit = async () => {
         try {
-            const api = "http://localhost:8100/admin/loginsystem"; // Same URL for both
+            const api = "https://node-js-task-jewelrywebsite-curd-2.onrender.com/admin/loginsystem"; // Same URL for both
             const response = await axios.post(api, input); // Sending `name`, `email`, `password`
             
             console.log(response.data);

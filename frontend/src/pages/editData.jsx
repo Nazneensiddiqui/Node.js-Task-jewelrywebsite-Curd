@@ -8,7 +8,7 @@ const EditData=()=>{
     const[uploadImage, setUploadImage]=useState({})
 
    const loadData=()=>{
-    let api = "http://localhost:8100/Product/editdisplay";
+    let api = "https://node-js-task-jewelrywebsite-curd-2.onrender.com/Product/editdisplay";
     axios.post(api , {id:id}).then((res)=>{
         setInput(res.data)
     })
@@ -39,7 +39,7 @@ setUploadImage(e.target.files[0])
        const response = await axios.post('https://api.cloudinary.com/v1_1/dumkd4xnv/image/upload', formData); 
      console.log(response.data.url) 
    
-     const api = "http://localhost:8100/Product/editproductsave";
+     const api = "https://node-js-task-jewelrywebsite-curd-2.onrender.com/Product/editproductsave";
      const res= await axios.post(api , {Imgname:response.data.url , ...input})
      console.log(res.data)
      alert(res.data.msg)

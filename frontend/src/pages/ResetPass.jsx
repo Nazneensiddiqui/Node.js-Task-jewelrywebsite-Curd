@@ -23,7 +23,7 @@ const handleInput=(e)=>{
 }
 
 const handleSubmit=async()=>{
-  let api="http://localhost:8100/admin/resetpassword";
+  let api="https://node-js-task-jewelrywebsite-curd-2.onrender.com/admin/resetpassword";
 
 try {
   const res= await axios.post(api , {userid:userid, ...input})

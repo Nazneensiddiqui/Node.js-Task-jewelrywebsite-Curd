@@ -8,7 +8,7 @@ const Search=()=>{
     const[mydata, setmyData]=useState([])
 
 const handlSubmit=()=>{
- let api = "http://localhost:8100/Product/productSearch";
+ let api = "https://node-js-task-jewelrywebsite-curd-2.onrender.com/Product/productSearch";
  axios.post(api, {item:item}).then((res)=>{
     setmyData(res.data)
  })

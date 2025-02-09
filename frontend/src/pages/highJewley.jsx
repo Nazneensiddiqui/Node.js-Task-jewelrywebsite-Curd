@@ -11,7 +11,7 @@ const [myData , setMyData]=useState([]);
 const dispatch=useDispatch()
 
     const loadData=()=>{
-        let api = "http://localhost:8100/Product/productdisplay";
+        let api = "https://node-js-task-jewelrywebsite-curd-2.onrender.com/Product/productdisplay";
         axios.get(api).then((res)=>{
             setMyData(res.data)
             console.log(res.data)

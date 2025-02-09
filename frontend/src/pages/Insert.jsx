@@ -31,7 +31,7 @@ const handlSubmit=async()=>{
        const response = await axios.post('https://api.cloudinary.com/v1_1/dumkd4xnv/image/upload', formData); 
      console.log(response.data.url) 
    
-     const api = "http://localhost:8100/Product/productinsert";
+     const api = "https://node-js-task-jewelrywebsite-curd-2.onrender.com/Product/productinsert";
      const res= await axios.post(api , {Imgname:response.data.url , ...input})
      console.log(res.data)
      alert(res.data.msg)

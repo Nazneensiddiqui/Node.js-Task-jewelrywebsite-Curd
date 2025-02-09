@@ -11,7 +11,7 @@ const Update=()=>{
     const navigate=useNavigate()
 
     const loadData=()=>{
-        let api = "http://localhost:8100/Product/productupdate";
+        let api = "https://node-js-task-jewelrywebsite-curd-2.onrender.com/Product/productupdate";
         axios.get(api).then((res)=>{
             setMyData(res.data)
             // console.log(res.data)
@@ -25,7 +25,7 @@ const Update=()=>{
 
    //delete data function
 const delData=(id)=>{
-    let api = "http://localhost:8100/product/productdelete";
+    let api = "https://node-js-task-jewelrywebsite-curd-2.onrender.com/product/productdelete";
         axios.post(api , {id:id}).then((res)=>{
     console.log(res.data);
     alert("Product Dalete!!!")
